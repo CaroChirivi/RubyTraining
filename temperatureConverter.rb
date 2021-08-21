@@ -1,9 +1,9 @@
 def celsiusToFarenheit ( celsius )
-    return (celsius * 1.8) + 32 
+    (celsius * 1.8) + 32 
 end
 
 def farenheitToCelsius ( farenheit )
-    return (farenheit - 32) * (5.0/9.0)
+    (farenheit - 32) * (5.0/9.0)
 end
 
 puts "Type the celsius value "
