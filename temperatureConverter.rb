@@ -6,6 +6,11 @@ def farenheitToCelsius ( farenheit )
     return (farenheit - 32) * (5.0/9.0)
 end
 
+puts "Type the celsius value "
+celsius = gets.chomp.to_f
+puts celsius.class
+puts "#{celsius} celsius is #{celsiusToFarenheit(celsius).to_s } farenheit"
 
-puts "30 celsius is " + celsiusToFarenheit(30).to_s + " farenheit"
-puts "20 farenheit is " + farenheitToCelsius(20).to_s + " celsius"
+puts "Type the farenheit value "
+farenheit = gets.chomp.to_f
+puts "#{farenheit} farenheit is #{farenheitToCelsius(farenheit).to_s } celsius"
