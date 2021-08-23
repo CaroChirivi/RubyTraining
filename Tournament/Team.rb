@@ -1,5 +1,10 @@
 class Team
 
+     def initialize(name)
+          @teamName = name
+          @points = 0
+     end
+
      def teamName
           @teamName
      end
@@ -7,26 +12,12 @@ class Team
      def teamName=( name )
           @teamName = name
      end
-
-     def teamGoals
-          @teamGoals
-     end
-
-     def teamGoals=( goals )
-          @teamGoals += goals
-     end
      
      def teamPoints
-          @teamPoints
+          @points
      end
 
-     def teamPoints=( points )
-          @teamPoints += points
+     def addPoints( points )
+          @points += points
      end
-
-     def initialize()
-          @teamPoints = 0
-          @teamGoals = 0
-     end
-
 end
