@@ -34,7 +34,6 @@ class Match
 
     def matchPoints
         score = team1Goals <=> team2Goals
-        puts score
         case score
             when 1 then @team1.addPoints(WINNER)
             when 0 then @team1.addPoints(TIES); @team2.addPoints(TIES)

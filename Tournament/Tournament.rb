@@ -6,11 +6,6 @@ teamB = Team.new("Argentina")
 teamC = Team.new("Mexico")
 teamD = Team.new("USA")     
 
-puts teamA.teamName
-puts teamB.teamName
-puts teamC.teamName
-puts teamD.teamName
-
 match1 = Match.new(teamA, teamB)
 match1.team1Goals = 3
 match1.team2Goals = 1
@@ -35,10 +30,6 @@ match6 = Match.new(teamB, teamC)
 match6.team1Goals = 3
 match6.team2Goals = 1
 
-puts match4.team1Goals
-puts match4.team2Goals
-
-
 matches = [match1, match2, match3, match4, match5, match6]
 
 for match in matches
@@ -53,6 +44,7 @@ for team in teams
 end
 
 puts <<DOC
+
             AMERICAN FUTBOL SOCCER TOURNAMENT 2021
 
 TEAMS
@@ -78,4 +70,4 @@ DOC
 teams.sort_by! {|team| -team.teamPoints}
 teams.each{ |team| puts " #{team.teamName} #{team.teamPoints}" }
 
-puts "\n And THE WIIINNNNNER issssss #{teams.first.teamName}"
+puts "\n And THE WIIINNNNNER issssss #{teams.first.teamName} \n"
