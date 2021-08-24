@@ -28,7 +28,9 @@ TEAMS
 
 DOC
 
+
 tournament.teams.each { |team| puts " * #{team.teamName}"}
+
 
 puts "\nMATCH RESULT"
 
@@ -38,9 +40,9 @@ puts <<DOC
 
 Final tournament standings table by points
 
-Match winner 3 points
-Match Ties 1 points
-Match loser no point
+Match winner #{Tournament::WINNER} points
+Match ties #{Tournament::TIES} points
+Match loser #{Tournament::LOSER} points
 
 DOC
 

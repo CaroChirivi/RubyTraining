@@ -1,7 +1,6 @@
-class Match
+require './Tournament'
 
-    WINNER = 3
-    TIES = 1
+class Match < Tournament
     
     def initialize(team1, goals1, team2, goals2)
         @team1 = team1
