@@ -13,12 +13,4 @@ class Tournament
         @matches = matches
     end   
 
-    def result
-        result = []
-        for team in @teams
-            result.push(team.teamPoints)
-        end
-        return result
-    end
-
 end
