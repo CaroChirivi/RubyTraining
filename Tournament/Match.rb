@@ -3,9 +3,12 @@ class Match
     WINNER = 3
     TIES = 1
     
-    def initialize(team1, team2)
+    def initialize(team1, goals1, team2, goals2)
         @team1 = team1
         @team2 = team2
+        @team1Goals = goals1
+        @team2Goals = goals2
+        matchPoints
     end    
     
     def team1
@@ -20,16 +23,8 @@ class Match
         @team1Goals
     end
     
-    def team1Goals=(goals)
-        @team1Goals = goals
-    end
-    
     def team2Goals
         @team2Goals
-    end
-    
-    def team2Goals=(goals)
-        @team2Goals = goals
     end
 
     def matchPoints
