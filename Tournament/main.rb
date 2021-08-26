@@ -46,7 +46,6 @@ Match loser #{Tournament::LOSER} points
 
 DOC
 
-tournament.teams.sort_by! {|team| -team.teamPoints}
-tournament.teams.each{ |team| puts " #{team.teamName} #{team.teamPoints}" }
+tournament.standingsTable
 
-puts "\n And THE WIIINNNNNER issssss #{tournament.teams.first.teamName} \n"
+puts "\n And THE WIIINNNNNER issssss #{tournament.winner} \n"

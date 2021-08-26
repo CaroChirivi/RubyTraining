@@ -1,16 +1,17 @@
+require './Logging'
+
 class Team
+
+     include Logging
 
      def initialize(name)
           @teamName = name
           @points = 0
+          log("Team - constructor create new object #{self}")
      end
 
      def teamName
           @teamName
-     end
-
-     def teamName=( name )
-          @teamName = name
      end
      
      def teamPoints
@@ -19,5 +20,6 @@ class Team
 
      def addPoints( points )
           @points += points
+          logLevel("Team - addPoints - add points to Team #{points}", "perrito")
      end
 end
