@@ -20,6 +20,6 @@ class Team
 
      def addPoints( points )
           @points += points
-          logLevel("Team - addPoints - add points to Team #{points}", "perrito")
+          log("Team - addPoints - add points to Team #{points}", "perrito")
      end
 end

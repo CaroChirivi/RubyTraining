@@ -3,12 +3,8 @@ require "logger"
 module Logging
  
     @@logger = Logger.new(STDOUT)
-    
-    def log(message)
-        @@logger.info(message)
-    end
 
-    def logLevel(message, level = "info")
+    def log(message, level = "info")
         begin
             @@logger.send(level, message)
         rescue NoMethodError
