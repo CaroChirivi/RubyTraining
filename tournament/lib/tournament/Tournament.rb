@@ -1,4 +1,6 @@
 require './Logging'
+require './Team'
+require './Match'
 
 class Tournament
 
@@ -14,6 +16,18 @@ class Tournament
     
     def teams
         @teams
+    end
+
+    def team(name)
+        team = Team.new(name)
+        @teams << team
+    end
+
+    def match(team1, team1Goals, team2, team2Goals)
+        match = Match.new(team1, team1Goals, team2, team2Goals)
+        @matchs << match
+    end
+    
     end
 
     def standingsTable
