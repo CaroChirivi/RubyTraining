@@ -5,11 +5,7 @@ Gem::Specification.new do |s|
     s.description = "Library that allow create tournament of futbol soccer, teams, matches and get the winner"
     s.authors     = ["Carolina Tarapues"]
     s.email       = 'diana.tarapues@bairesdev.com'
-    s.files       = [
-                     "lib/tournament/Team.rb", 
-                     "lib/tournament/Match.rb", 
-                     "lib/tournament/Logging.rb", 
-                     "lib/tournament/Tournament.rb"
-                    ]
+    s.files         = Dir.glob('**/*')
+    s.require_paths = ['lib']
     s.license       = 'Caro and bairesdev'
   end
