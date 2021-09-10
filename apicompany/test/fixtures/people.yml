@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  personType: MyString
+  project: one
+  country: one
+  rol: one
+
+two:
+  name: MyString
+  personType: MyString
+  project: two
+  country: two
+  rol: two
