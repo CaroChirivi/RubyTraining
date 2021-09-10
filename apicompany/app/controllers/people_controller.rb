@@ -1,4 +1,5 @@
 class PeopleController < ApplicationController
+
   before_action :set_person, only: [:show, :update, :destroy]
 
   # GET /people
@@ -36,6 +37,20 @@ class PeopleController < ApplicationController
   # DELETE /people/1
   def destroy
     @person.destroy
+  end
+
+  #GET employees
+  def employees
+    @people = Person.with_employee
+    
+    render json: @people
+  end
+
+  #GET customers
+  def customers
+      @people = Person.with_customer
+      
+      render json: @people
   end
 
   private
