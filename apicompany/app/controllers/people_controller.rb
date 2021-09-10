@@ -5,8 +5,10 @@ class PeopleController < ApplicationController
   # GET /people
   def index
     @people = Person.all
+   
+    render :json => @people, :include => {:country => {:only => :name}}, :except => [:created_at, :updated_at]
+    
 
-    render json: @people
   end
 
   # GET /people/1
