@@ -2,14 +2,14 @@
 
 one:
   name: MyString
-  personType: MyString
+  person_type: MyString
   project: one
   country: one
   rol: one
 
 two:
   name: MyString
-  personType: MyString
+  person_type: MyString
   project: two
   country: two
   rol: two
