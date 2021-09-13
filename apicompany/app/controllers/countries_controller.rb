@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class CountriesController < ApplicationController
-  before_action :set_country, only: [:show, :update, :destroy]
+  before_action :set_country, only: %i[show update destroy]
 
   # GET /countries
   def index
@@ -39,13 +41,14 @@ class CountriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_country
-      @country = Country.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def country_params
-      params.require(:country).permit(:name)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_country
+    @country = Country.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def country_params
+    params.require(:country).permit(:name)
+  end
 end

@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class RolsController < ApplicationController
-  before_action :set_rol, only: [:show, :update, :destroy]
+  before_action :set_rol, only: %i[show update destroy]
 
   # GET /rols
   def index
@@ -39,13 +41,14 @@ class RolsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_rol
-      @rol = Rol.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def rol_params
-      params.require(:rol).permit(:name)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_rol
+    @rol = Rol.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def rol_params
+    params.require(:rol).permit(:name)
+  end
 end

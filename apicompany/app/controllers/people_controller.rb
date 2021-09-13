@@ -1,11 +1,11 @@
-class PeopleController < ApplicationController
+# frozen_string_literal: true
 
-  before_action :set_person, only: [:show, :update, :destroy]
+class PeopleController < ApplicationController
+  before_action :set_person, only: %i[show update destroy]
 
   # GET /people
   def index
     @people = Person.all
-    
 
     render json: @people, include: {
       project: {
@@ -50,10 +50,10 @@ class PeopleController < ApplicationController
     @person.destroy
   end
 
-  #GET employees
+  # GET employees
   def employees
     @people = Person.with_employee
-    
+
     render json: @people, include: {
       project: {
         only: [:name]
@@ -67,21 +67,22 @@ class PeopleController < ApplicationController
     }
   end
 
-  #GET customers
+  # GET customers
   def customers
-      @people = Person.with_customer
-      
-      render json: @people
+    @people = Person.with_customer
+
+    render json: @people
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_person
-      @person = Person.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def person_params
-      params.require(:person).permit(:name, :person_type, :project_id, :country_id, :rol_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_person
+    @person = Person.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def person_params
+    params.require(:person).permit(:name, :person_type, :project_id, :country_id, :rol_id)
+  end
 end

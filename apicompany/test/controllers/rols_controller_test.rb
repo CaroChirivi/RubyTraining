@@ -1,16 +1,18 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class RolsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @rol = rols(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get rols_url, as: :json
     assert_response :success
   end
 
-  test "should create rol" do
+  test 'should create rol' do
     assert_difference('Rol.count') do
       post rols_url, params: { rol: { name: @rol.name } }, as: :json
     end
@@ -18,17 +20,17 @@ class RolsControllerTest < ActionDispatch::IntegrationTest
     assert_response 201
   end
 
-  test "should show rol" do
+  test 'should show rol' do
     get rol_url(@rol), as: :json
     assert_response :success
   end
 
-  test "should update rol" do
+  test 'should update rol' do
     patch rol_url(@rol), params: { rol: { name: @rol.name } }, as: :json
     assert_response 200
   end
 
-  test "should destroy rol" do
+  test 'should destroy rol' do
     assert_difference('Rol.count', -1) do
       delete rol_url(@rol), as: :json
     end

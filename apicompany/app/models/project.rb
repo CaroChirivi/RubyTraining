@@ -1,6 +1,8 @@
-class Project < ApplicationRecord
-    has_many :people
+# frozen_string_literal: true
 
-    validates :name, presence: true
-    validates :name, uniqueness: true
+class Project < ApplicationRecord
+  has_many :people
+
+  validates :name, presence: true
+  validates :name, uniqueness: true
 end
