@@ -5,10 +5,19 @@ class PeopleController < ApplicationController
   # GET /people
   def index
     @people = Person.all
-   
-    render :json => @people, :include => {:country => {:only => :name}}, :except => [:created_at, :updated_at]
     
 
+    render json: @people, include: {
+      project: {
+        only: [:name]
+      },
+      country: {
+        only: [:name]
+      },
+      rol: {
+        only: [:name]
+      }
+    }
   end
 
   # GET /people/1
@@ -45,7 +54,17 @@ class PeopleController < ApplicationController
   def employees
     @people = Person.with_employee
     
-    render json: @people
+    render json: @people, include: {
+      project: {
+        only: [:name]
+      },
+      country: {
+        only: [:name]
+      },
+      rol: {
+        only: [:name]
+      }
+    }
   end
 
   #GET customers
