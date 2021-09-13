@@ -8,12 +8,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-projects = Project.create([{ name: 'Akara' }, { name: 'ProG' }])
-countries = Country.create([
-                             { name: 'Colombia' },
-                             { name: 'Mexico' },
-                             { name: 'Peru' },
-                             { name: 'USA' },
-                             { name: 'Argentina' }
-                           ])
-rols = Rol.create([{ name: 'Developer' }, { name: 'Project Manager' }, { name: 'CEO' }])
+Project.create([{ name: 'Akara' }, { name: 'ProG' }])
+Country.create([
+                 { name: 'Colombia' },
+                 { name: 'Mexico' },
+                 { name: 'Peru' },
+                 { name: 'USA' },
+                 { name: 'Argentina' }
+               ])
+Rol.create([{ name: 'Developer' }, { name: 'Project Manager' }, { name: 'CEO' }])
