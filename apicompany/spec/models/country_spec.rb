@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Country, type: :model do
   subject {
-    described_class.new(name: nil)
+    described_class.new(name: 'Name')
   }
 
   describe 'Validations' do
