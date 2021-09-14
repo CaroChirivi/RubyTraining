@@ -1,23 +1,32 @@
-Style/Documentation:
-  Enabled: false
+require: 
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/{bundle,rails,rake}'
+    - !ruby/regexp /old_and_unused\.rb$/
+
+Metrics/LineLength:
+  Max: 100
 
 Metrics/BlockLength:
   Exclude:
-    - "db/schema.rb"
+    - config/**/*
+    - spec/**/*
 
-Metrics/CyclomaticComplexity:
+Lint/AmbiguousBlockAssociation:
   Exclude:
-    - "bin/bundle"
+    - spec/**/*
 
-Metrics/MethodLength:
-  Exclude:
-    - "bin/bundle"
-
-Metrics/PerceivedComplexity:
-  Exclude:
-    - "bin/bundle"
+Style/Documentation:
+  Enabled: false
 
 Layout/LineLength:
   Exclude:
-    - "bin/bundle"
+    - test/**/*
     - "test/controllers/people_controller_test.rb"
