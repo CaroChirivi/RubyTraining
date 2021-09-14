@@ -7,7 +7,7 @@ class Person < ApplicationRecord
 
   validates :name, :person_type, :project_id, :country_id, :rol_id, presence: true
   validates :person_type, inclusion: { in: %w[Employee Customer],
-                                       message: '%{value} is not a valid person type' }
+                                       message: '%<value>s is not a valid person type' }
 
   scope :with_employee, -> { where(person_type: 'Employee') }
   scope :with_customer, -> { where(person_type: 'Customer') }

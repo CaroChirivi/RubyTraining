@@ -1,2 +1,23 @@
 Style/Documentation:
   Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - "db/schema.rb"
+
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - "bin/bundle"
+
+Metrics/MethodLength:
+  Exclude:
+    - "bin/bundle"
+
+Metrics/PerceivedComplexity:
+  Exclude:
+    - "bin/bundle"
+
+Layout/LineLength:
+  Exclude:
+    - "bin/bundle"
+    - "test/controllers/people_controller_test.rb"
