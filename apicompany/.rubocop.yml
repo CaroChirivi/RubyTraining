@@ -3,6 +3,9 @@ require:
   - rubocop-rails
   - rubocop-rspec
 
+inherit_gem:
+  rubocop-discourse: default.yml
+
 AllCops:
   Exclude:
     - 'db/**/*'
@@ -10,9 +13,7 @@ AllCops:
     - 'script/**/*'
     - 'bin/{bundle,rails,rake}'
     - !ruby/regexp /old_and_unused\.rb$/
-
-Metrics/LineLength:
-  Max: 100
+    - 'vendor/bundle/**/*'
 
 Metrics/BlockLength:
   Exclude:
@@ -29,4 +30,4 @@ Style/Documentation:
 Layout/LineLength:
   Exclude:
     - test/**/*
-    - "test/controllers/people_controller_test.rb"
+    - 'test/controllers/people_controller_test.rb'

@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 class Person < ApplicationRecord
-  belongs_to :project
-  belongs_to :country
-  belongs_to :rol
+  belongs_to :project, optional: true
+  belongs_to :country, optional: true
+  belongs_to :rol, optional: true
 
   validates :name, :person_type, :project_id, :country_id, :rol_id, presence: true
   validates :person_type, inclusion: { in: %w[Employee Customer],
