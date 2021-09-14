@@ -14,6 +14,7 @@ RSpec.describe Person, type: :model do
   describe "Associations" do
     it { should belong_to(:project).without_validating_presence }
     it { should belong_to(:country).without_validating_presence }
+    it { should belong_to(:rol).without_validating_presence }
   end
 
   it 'is valid with valid attributes' do
