@@ -1,0 +1,15 @@
+<%= if @success %>
+    <p>Your account is create</p>
+    <a href="<%= signin_path  %>">Sign in</a>
+<% end %>
+
+<h1>Sign up</h1>
+
+<form method="POST" action="<%= register_path %>">
+    <%= token_tag %>
+    <label for ="username">Username</label>
+    <input type="email" name="username" id="username" required>
+    <label for ="userpassword">Userpassword</label>
+    <input type="password" name="userpassword" id="userpassword" required>
+    <input type="Submit" value="register">
+</form>
