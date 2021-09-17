@@ -1,3 +1,7 @@
+<% if !@loggedin && @loggedin!= nil %>
+    <p>Either email or password does not match</p>  
+<% end %>
+
 <h1>Sign in</h1>
 
 <form method="POST" action="<%= login_path %>">

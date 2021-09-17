@@ -1,6 +1,8 @@
-<%= if @success %>
+<% if @register %>
     <p>Your account is create</p>
     <a href="<%= signin_path  %>">Sign in</a>
+<% elsif @register != nil%>
+    <p>Email already taken</p>
 <% end %>
 
 <h1>Sign up</h1>
