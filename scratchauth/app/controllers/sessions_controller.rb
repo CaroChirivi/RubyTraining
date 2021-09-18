@@ -11,12 +11,18 @@ class SessionsController < ApplicationController
             response = {
                 :loggedin => true
             }
-            render json: response
+            session[:user_id] = user.id
+            redirect_to landing_path
         else
             response = {
                 :loggedin => false
             }
             render 'new'
         end
+    end
+
+    def destroy
+        session[:user_id] = nil
+        redirect_to landing_path
     end
 end

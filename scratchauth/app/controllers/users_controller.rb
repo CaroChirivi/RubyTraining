@@ -19,7 +19,7 @@ class UsersController < ApplicationController
         render 'new'
     end
 
-    def destroy
-        
+    def landing
+        render 'layouts/landing'
     end
 end
